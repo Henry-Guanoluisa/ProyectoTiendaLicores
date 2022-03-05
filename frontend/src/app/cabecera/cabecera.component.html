@@ -1,11 +1,33 @@
 <header>
-    <nav>
-        <img src="../../assets/images/icon.png" alt="Icono de licoreria">
-        <ul>
-            <li><a routerLink="/inicio">Inicio</a></li>
-            <li><a routerLink="/comprar">Comprar licores</a></li>
-            <li><a routerLink="/registrar">Registrar licores</a></li>
-            <li><a routerLink="/contacto">Contacto</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <img src="../../assets/images/icon.png" alt="Icono de licoreria">
+    <ul>
+      <li><a routerLink="/inicio">Inicio</a></li>
+      <li><a routerLink="/comprar">Comprar licores</a></li>
+      <li><a routerLink="/registrar">Registrar licores</a></li>
+      <li><a routerLink="/contacto" >Contacto</a></li>
+      <li>
+        <a (click)="displaySearch = true" *ngIf="!displaySearch">
+          <img src="assets/images/search.svg" alt="search" style="width: 60px;height: 25px !important;margin-top: 7px">
+        </a>
+        <a *ngIf="displaySearch" style="position: relative">
+          <img (click)="displaySearch = false" src="assets/images/close.svg" alt=""
+               style="width: 60px;height: 25px !important;margin-top: 7px">
+          <form>
+            <div class="mb-3" style="position: absolute;right: 0;top: 50px">
+              <input type="text"
+                     class="form-control"
+                     placeholder="Buscar Licor"
+                     style="width: 300px"
+                     [(ngModel)]="searchLicor"
+                      name="search">
+              <img (click)="searchData()" src="assets/images/search-data.svg" alt="search"
+                   style="width: 60px;height: 25px;position: absolute;right: 0px;top: 0px;margin-top: 5px">
+            </div>
+          </form>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
 </header>

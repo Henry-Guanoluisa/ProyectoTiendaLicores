@@ -10,6 +10,7 @@ import { ComprarComponent } from './comprar/comprar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LicorService} from "../services/licor.service";
+import{ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-comprar',
@@ -8,12 +9,18 @@ import {LicorService} from "../services/licor.service";
 })
 export class ComprarComponent implements OnInit {
 
-  constructor(private licorService: LicorService) { }
+  constructor(private licorService: LicorService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.licorService.getProducts().subscribe((data)=>{
-      console.log(data)
+    this.activatedRoute.queryParams.subscribe((query)=>{
+      if(query["licor"]){
+        console.log(query["licor"])
+      }
+
     })
+    // this.licorService.getProducts().subscribe((data)=>{
+    //   console.log(data)
+    // })
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-cabecera',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cabecera.component.css']
 })
 export class CabeceraComponent implements OnInit {
-
-  constructor() { }
+  displaySearch = false
+  searchLicor = ""
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+  searchData(){
+    console.log("dio clic", this.searchLicor)
+    this.router.navigate(['comprar'], {queryParams:{licor:this.searchLicor}}).then();
+
   }
 
 }
