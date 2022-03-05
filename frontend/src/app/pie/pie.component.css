@@ -1,0 +1,29 @@
+footer {
+    background-image: url("../../assets/images/footer.png");
+    margin-top: 30px;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-div {
+    background-image: url("../../assets/images/back.png");
+    width: 500px;
+    padding: 30px;
+    box-shadow: inset 0px 0px 3px 3px black;
+}
+
+iframe {
+    width: 95%;
+}
+
+h1 {
+    color: rgb(3, 3, 142);
+}
+
+hr {
+    border: 1px solid rgba(3, 3, 142, 0.2);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
