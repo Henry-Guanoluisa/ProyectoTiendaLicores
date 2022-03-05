@@ -42,4 +42,5 @@ export class LicorService {
     let headers=new HttpHeaders().set('Content-Type','application/json');
     return this._http.delete(this.url+'producto/'+id,{headers:headers});
   }
+
 }

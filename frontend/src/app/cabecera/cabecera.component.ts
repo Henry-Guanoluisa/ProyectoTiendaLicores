@@ -14,9 +14,8 @@ export class CabeceraComponent implements OnInit {
   ngOnInit(): void {
   }
   searchData(){
-    console.log("dio clic", this.searchLicor)
+    console.log("dio clic")
     this.router.navigate(['comprar'], {queryParams:{licor:this.searchLicor}}).then();
-
   }
 
 }

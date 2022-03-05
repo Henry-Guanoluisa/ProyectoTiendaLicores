@@ -7,28 +7,35 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./comprar.component.css']
 })
 export class ComprarComponent implements OnInit {
-  allProducts = []
+  allProducts: any[] = []
+
   constructor(private licorService: LicorService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.licorService.getProducts().subscribe((data) => {
-      this.allProducts = data.productos
-      console.log(this.allProducts)
+    this.searchProducts()
+  }
 
-    })
+  searchProducts() {
     this.activatedRoute.queryParams.subscribe(query => {
-      const buscador  = query["licor"]
+      const buscador = query["licor"]
+      let productsAux: any[] = []
       if (buscador) {
-        console.log("query ", buscador)
         this.allProducts.forEach((product) => {
           if (product['titulo'] == query["licor"]) {
-            console.log("product ", product)
-            this.allProducts.push(product)
+            productsAux.push(product)
           }
         })
+        this.allProducts = [...productsAux]
+      } else {
+        this.getAllProducts()
       }
     })
+  }
 
+  getAllProducts() {
+    this.licorService.getProducts().subscribe((data) => {
+      this.allProducts = data.productos
+    })
   }
 
 }
