@@ -9,6 +9,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ComprarComponent } from './comprar/comprar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactoComponent } from './contacto/contacto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

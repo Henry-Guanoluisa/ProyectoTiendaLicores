@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LicorService} from "../services/licor.service";
 
 @Component({
   selector: 'app-comprar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComprarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private licorService: LicorService) { }
 
   ngOnInit(): void {
+    this.licorService.getProducts().subscribe((data)=>{
+      console.log(data)
+    })
   }
 
 }
