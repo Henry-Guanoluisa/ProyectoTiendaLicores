@@ -1,0 +1,74 @@
+.banner{
+    width: 700px;
+    height: 300px;
+    border: 3px solid rgb(80, 28, 28);
+    margin: auto;
+
+    background-size: 100% 100%;
+    
+    animation: banner 10s infinite;
+    /*animation-direction: alternate;*/
+
+}
+
+@keyframes banner {
+    0%, 30%{
+        background-image: url("../../../assets/images/banner4.jpg");
+        opacity: 1;
+    }
+    31%,34%{
+        opacity: 0.1;
+    }
+
+    35%, 65%{
+        background-image: url("../../../assets/images/banner2.jpg");
+        opacity: 1;
+    }
+    66%,69%{
+        opacity: 0.1;
+    }
+
+    70%,100%{
+        opacity: 1;
+        background-image: url("../../../assets/images/banner3.jpg");
+        
+    }
+}
+
+
+
+#encabezadoContacto{
+    height: 100px;
+    padding-left: 30px;
+    color: beige;
+}
+#formulariocontacto p {
+    color: white;
+}
+
+#formulariocontacto p label{
+    color: white;
+}
+
+#formulariocontacto{
+    height: 500px;
+    padding-left: 30px;
+
+}
+#formulariocontacto p input{
+    height: 30px;
+    width: auto;
+}
+#formulariocontacto textarea {
+    height: 200px;
+    width: auto;
+}
+
+#formulariocontacto button{
+    height: 30px;
+    width: 20%;
+    background: rgb(38,39,41);
+    color: white;
+
+}
+
