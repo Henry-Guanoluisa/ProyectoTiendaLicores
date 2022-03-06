@@ -20,10 +20,9 @@ export class ComprarComponent implements OnInit {
       const buscador = query["licor"]
       let productsAux: any[] = []
       if (buscador) {
-        this.allProducts.forEach((product) => {
-          if (product['titulo'] == query["licor"]) {
-            productsAux.push(product)
-          }
+        
+        productsAux = this.allProducts.filter((product)=>{
+          return product['titulo'].indexOf(query["licor"]) == 0
         })
         this.allProducts = [...productsAux]
       } else {
