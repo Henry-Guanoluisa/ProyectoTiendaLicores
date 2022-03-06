@@ -1,42 +1,8 @@
 header {
-    /* background-image: linear-gradient(to right, #150C0C, #4D281E, #150C0C); */
+    
     background-image: url("../../assets/images/wooden-background.jpg");
     background-size: contain;
     position: sticky;
     top: 0;
     box-shadow: 0px 1px 11px 1px black;
 }
-
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-img {
-    height: 100px;
-    padding-left: 20px;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-}
-
-li {
-    padding: 20px;
-}
-
-a {
-    color: rgb(235, 235, 235);
-    font-size: x-large;
-    text-shadow: 1px 1px 3px black;
-}
-
-a:hover {
-    color: #b18836;
-    transition: 0.5s;
-}
-
-
