@@ -11,6 +11,7 @@ import { RegistrarComponent } from './registrar/registrar.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {DialogModule} from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

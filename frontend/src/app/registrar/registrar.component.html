@@ -1,1 +1,117 @@
-<p>registrar works!</p>
+<div style="margin-top: 50px;margin-bottom: 100px">
+
+    <div style="margin-bottom: 20px">
+      <button type="button" class="btn btn-warning" (click)="displayAgregar=true">Agregar</button>
+    </div>
+  
+    <table class="table" *ngIf="productsGet.length > 0">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Operacion</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let product of productsGet;index as i">
+        <th scope="row">{{ i + 1}}</th>
+        <td>
+          <img class="avatar-cloth" [src]="product['imagen']" alt="">
+        </td>
+        <td>{{product['titulo']}}</td>
+        <td>{{product['precio']}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" style="margin-right: 20px" (click)="getIdProduct(product['_id'])">Editar</button>
+          <button type="button" class="btn btn-danger" (click)="eliminarProduct(product['_id'])">Eliminar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  
+  </div>
+  
+  <p-dialog header="Agregar Producto" [(visible)]="displayAgregar" [modal]="true"  [style]="{width: '75vw'}">
+    <form class="was-validated" (ngSubmit)="saveProduct(forma)" #forma="ngForm">
+      <div class="mb-3">
+        <label for="tituloAgregar" class="form-label">Nombre de la prenda</label>
+        <input type="text"
+               class="form-control"
+               id="tituloAgregar"
+               placeholder="Nombre del producto"
+               required
+                [(ngModel)]="product.titulo"
+                name="nameProdSave"
+               autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label for="precioAgregar" class="form-label">Precio de la prenda</label>
+        <input type="text"
+               class="form-control"
+               id="precioAgregar"
+               placeholder="$20.00" required
+                [(ngModel)]="product.precio"
+                name="priceProdSave"
+               autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label for="imgAgregar" class="form-label">Imagen de la prenda</label>
+        <input type="text"
+               class="form-control"
+               id="imgAgregar"
+               placeholder="https://www."
+               [(ngModel)]="product.imagen"
+               name="imgProdSave"
+               required
+               autocomplete="off">
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-right: 10px" [disabled]="forma.invalid">Agregar</button>
+      <button type="button" class="btn btn-danger" (click)="displayAgregar=false">Cancelar</button>
+    </form>
+  
+  </p-dialog>
+  
+  
+  
+  
+  
+  <p-dialog header="Actualizar Producto" [(visible)]="displayActualizar" [modal]="true"  [style]="{width: '75vw'}">
+    <form class="was-validated" #formaUpdate="ngForm" (ngSubmit)="updateProduct(formaUpdate)">
+      <div class="mb-3">
+        <label for="tituloAactualizarr" class="form-label">Nombre de la prenda</label>
+        <input type="text"
+               class="form-control"
+               id="tituloAactualizarr"
+               placeholder="Nombre del producto"
+               required
+                [(ngModel)]="productUpdate.titulo"
+                name="nameProdUpdate"
+               autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label for="precioActualizar" class="form-label">Precio de la prenda</label>
+        <input type="text"
+               class="form-control"
+               id="precioActualizar"
+               placeholder="$20.00" required
+                [(ngModel)]="productUpdate.precio"
+                name="priceProdUpdate"
+               autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label for="imgActualizar" class="form-label">Imagen de la prenda</label>
+        <input type="text"
+               class="form-control"
+               id="imgActualizar"
+               placeholder="https://www."
+               [(ngModel)]="productUpdate.imagen"
+               name="imgActualizar"
+               required
+               autocomplete="off">
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-right: 10px" [disabled]="formaUpdate.invalid">Actualizar</button>
+      <button type="button" class="btn btn-danger" (click)="displayActualizar=false">Cancelar</button>
+    </form>
+  
+  </p-dialog>
