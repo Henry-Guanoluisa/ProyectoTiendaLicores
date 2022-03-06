@@ -1,5 +1,5 @@
 .banner{
-    width: 700px;
+    width: 500px;
     height: 300px;
     border: 3px solid rgb(80, 28, 28);
     margin: auto;
@@ -30,7 +30,6 @@
 
     70%,100%{
         opacity: 1;
-        /* background-image: url("../../../assets/images/banner3.jpg"); */
         background-image: url("../../assets/images/banner3.jpg");
         
     }
@@ -41,14 +40,14 @@
 #encabezadoContacto{
     height: 100px;
     padding-left: 30px;
-    color: beige;
+    color: black;
 }
 #formulariocontacto p {
-    color: white;
+    color: black;
 }
 
 #formulariocontacto p label{
-    color: white;
+    color: black;
 }
 
 #formulariocontacto{
@@ -59,10 +58,12 @@
 #formulariocontacto p input{
     height: 30px;
     width: auto;
+    border: 1px solid gray;
 }
 #formulariocontacto textarea {
     height: 200px;
     width: auto;
+    border: 1px solid gray;
 }
 
 #formulariocontacto button{
