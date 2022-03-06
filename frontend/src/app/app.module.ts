@@ -12,7 +12,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {DialogModule} from 'primeng/dialog';
-
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import {DialogModule} from 'primeng/dialog';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    DialogModule
+    DialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
