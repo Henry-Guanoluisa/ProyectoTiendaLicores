@@ -12,3 +12,20 @@
 body {
     background: linear-gradient(110deg, #450b0b 60%, #542f2f 60%);
 }
+
+#redes {
+    background-color: rgba(240,248,255, 0.3);
+    position: fixed;
+    width: 60px;
+    height: 180px;
+    top: 150px;
+    right: 0px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#redes img {
+    width: 40px;
+    border: 1px solid white;
+}
