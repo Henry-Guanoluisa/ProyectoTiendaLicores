@@ -36,7 +36,7 @@
   <p-dialog header="Agregar Producto" [(visible)]="displayAgregar" [modal]="true"  [style]="{width: '50vw'}">
     <form class="was-validated" (ngSubmit)="saveProduct(forma)" #forma="ngForm">
       <div class="mb-3">
-        <label for="tituloAgregar" class="form-label">Nombre de la prenda</label>
+        <label for="tituloAgregar" class="form-label">Nombre del licor</label>
         <input type="text"
                class="form-control"
                id="tituloAgregar"
@@ -47,7 +47,7 @@
                autocomplete="off">
       </div>
       <div class="mb-3">
-        <label for="precioAgregar" class="form-label">Precio de la prenda</label>
+        <label for="precioAgregar" class="form-label">precio del licor</label>
         <input type="text"
                class="form-control"
                id="precioAgregar"
@@ -57,7 +57,7 @@
                autocomplete="off">
       </div>
       <div class="mb-3">
-        <label for="imgAgregar" class="form-label">Imagen de la prenda</label>
+        <label for="imgAgregar" class="form-label">Imagen del licor</label>
         <input type="text"
                class="form-control"
                id="imgAgregar"
@@ -80,7 +80,7 @@
   <p-dialog header="Actualizar Producto" [(visible)]="displayActualizar" [modal]="true"  [style]="{width: '75vw'}">
     <form class="was-validated" #formaUpdate="ngForm" (ngSubmit)="updateProduct(formaUpdate)">
       <div class="mb-3">
-        <label for="tituloAactualizarr" class="form-label">Nombre de la prenda</label>
+        <label for="tituloAactualizarr" class="form-label">Nombre del licor</label>
         <input type="text"
                class="form-control"
                id="tituloAactualizarr"
@@ -91,7 +91,7 @@
                autocomplete="off">
       </div>
       <div class="mb-3">
-        <label for="precioActualizar" class="form-label">Precio de la prenda</label>
+        <label for="precioActualizar" class="form-label">Precio del licor</label>
         <input type="text"
                class="form-control"
                id="precioActualizar"
@@ -101,7 +101,7 @@
                autocomplete="off">
       </div>
       <div class="mb-3">
-        <label for="imgActualizar" class="form-label">Imagen de la prenda</label>
+        <label for="imgActualizar" class="form-label">Imagen del licor</label>
         <input type="text"
                class="form-control"
                id="imgActualizar"
