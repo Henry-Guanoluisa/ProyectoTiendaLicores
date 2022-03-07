@@ -1,4 +1,4 @@
-<header>
+<header style="z-index: 1;">
   <nav>
     <img src="../../assets/images/icon.png" alt="Icono de licoreria">
     <ul>
@@ -21,7 +21,7 @@
                      style="width: 300px"
                      [(ngModel)]="searchLicor"
                       name="search"
-                      (keyup)="searchData(searchLicor)">
+                      (keyup)="searchData()">
               <img src="assets/images/search-data.svg" alt="search"
                    style="width: 60px;height: 25px;position: absolute;right: 0px;top: 0px;margin-top: 5px">
             </div>
@@ -32,3 +32,7 @@
     </ul>
   </nav>
 </header>
+
+<div class="add-car">
+  <img id="icon-car" src="assets/images/cart.svg" alt="">
+</div>

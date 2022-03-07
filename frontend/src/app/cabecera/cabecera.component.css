@@ -40,3 +40,18 @@ a:hover {
 }
 
 
+.add-car{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: white;
+    border-radius: 100%;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#icon-car{
+    height: 50px !important;
+    padding-left: 0px !important;
+}
