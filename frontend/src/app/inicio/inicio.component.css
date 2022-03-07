@@ -1,9 +1,7 @@
-img {
-    vertical-align: bottom;
-    max-height: 100%;
-    width: 50%;
+img{
+    width: 90vw !important;
+    height: 40vw !important;
 }
-
 .promocion-texto {
     background-color: #18242E;
     display: flex;
